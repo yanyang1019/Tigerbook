@@ -5,3 +5,7 @@
 <?php 
     include 'includefiles/bottom.php';
 ?>
+
+<?php 
+    include 'includefiles/connect.php';
+?>
