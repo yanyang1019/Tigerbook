@@ -1,5 +1,8 @@
 <?php
-  include "functions.php";
-  $config_defaulttitle='Tigerbook';
-  $get_pagepath=$_SERVER["PHP_SELF"];
+    require "module/webnews.php";
+    require "functions.php";//???????
+    require "libary/database.php";
+    $config_defaulttitle='Tigerbook';
+    
+    
 ?>

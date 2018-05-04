@@ -7,36 +7,30 @@
     .regtable .lefttd{text-align: right;width:25%;color:gray}
     .regtable .righttd{text-align: left;width:75%}
     .regtable .text{width:58%;border: solid 1px #ddd;height:34px;line-height:34px;background:#f5f5f5;border-radius:5px;}
-    #cmdReg{width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;}
+    #cmdLogin{width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;}
 </style>
 
 <table class="mytable regtable">
  <tr>
  <th></th>
-  <th class="righttd">User Register</th>
+  <th class="righttd">User Login</th>
  </tr>
  <tr>
    <td  class="lefttd">Username:</td>
    <td class="righttd"><input type="text" name="userName"  class="text"/></td> 
  </tr>
  
-  <tr>
-   <td  class="lefttd">Mail:</td>
-   <td class="righttd"><input type="text" name="userEmail"  class="text"/></td> 
- </tr>
  <tr>
    <td  class="lefttd">Password:</td>
    <td  class="righttd"><input type="password" name="userPwd1" class="text"/></td> 
  </tr>
-  <tr>
-   <td  class="lefttd">Confirm Password:</td>
-   <td  class="righttd"><input type="password" name="userPwd2" class="text"/></td> 
- </tr>
+
  <tr>
   <td></td>
   <td class="righttd" >
-    <input type="submit" value="register" name="cmdReg"  id="cmdReg" />
+    <input type="submit" value="login" name="cmdLogin"  id="cmdLogin" />
   </td>
+ 
  </tr>
 </table>
  </form>
