@@ -94,16 +94,28 @@ class webuser
         }
     }
     
-     private function userLogin($username,$userpwd)
+     public function userLogin($username,$userpwd)
     {
         //database code goes here
-        if(trim($username)=="") return;
-        setcookie("mywebuser",$username,time()+200,"/");
+        if($username == "") return false;
+        require_once "..\library\database.php";
+        $db = new Database();
+        $db->connect();
+        $sql = "select * from Login where userName = '$username' and passWord = md5('$userpwd')";
+        $res = $db->execForOne($sql);
+        $total = mysqli_num_rows($res);
+
+        if($total == 0)
+            return false;
+        else
+            return true;
+        
+        //setcookie("mywebuser",$username,time()+200,"/");
     }
     
     
     
-    private function addUser($userName,$userEmail,$userPwd1,$userPwd2) //add user to database
+    public function addUser($userName,$userEmail,$userPwd1,$userPwd2) //add user to database
     {
         
         if($userPwd1=="" || $userPwd1!=$userPwd2 ) //password doesn't match 
@@ -117,26 +129,29 @@ class webuser
             return false; 
         }
         
+        /*
         if(isFormat($userName,$userEmail))
         {
             $this->error_code="003";
             return false;
-        } 
+        } */
         
-        if(isRepeat($userName,$userEmail)) //------> shu ju ku 
+        require_once "..\library\database.php";
+        $db = new Database();
+        $db->connect();
+        
+        if($db->isUserRepeat($userName)) //------> shu ju ku 
         {
               $this->error_code="004";
             return false;
         }
         
-        $ret=DataBase::addData($userName,$userEmail,$userPwd1,$userPwd2);
-        if($ret && intval($ret)>0) //successfully added into database
-        {
-             $this->error_code="000";
-            return true;
-        }
-        $this->error_code="009";
-        return false;
+        
+        $sql = "insert into Login Values ('$userName','$userEmail',md5('$userPwd1'))";
+        $db->execForOne($sql);
+
+        $db->close();
+        echo "register success!";
     }
 }
 

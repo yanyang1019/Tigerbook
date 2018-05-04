@@ -2,9 +2,6 @@
     include 'includefiles/top.php';
 ?>
 
- 
-
-
-   <?php 
+<?php 
     include 'includefiles/bottom.php';
-  ?>
+?>
