@@ -1,6 +1,9 @@
  <ifmodule mod_rewrite.c>
     RewriteEngine On
+<<<<<<< HEAD
     
+=======
+>>>>>>> 0bb2b9f2413a699918c29b0ca8c42f71890fb8f0
     RewriteRule ^news$ /index.php?type=news [L]
     RewriteRule ^reg /index.php?type=reg [L]
     RewriteRule ^login /index.php?type=login [L]
