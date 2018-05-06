@@ -28,6 +28,7 @@
             "friends"=>"friends.tpl",
             "profile"=>"profile.tpl",
             "login"=>"login.tpl",
+	    "logout"=>"logout.tpl",
             
        ); 
        
