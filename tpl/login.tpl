@@ -1,4 +1,4 @@
-<form method="post">
+<form method="post" action="includefiles/login.php">
 <style>
     .regtable{width:600px;background:#fff;border-radius:5px;padding-top:30px;padding-bottom:100px}
     .regtable th{font-size:26px;color:#9c9c9c}
@@ -22,7 +22,7 @@
  
  <tr>
    <td  class="lefttd">Password:</td>
-   <td  class="righttd"><input type="password" name="userPwd1" class="text"/></td> 
+   <td  class="righttd"><input type="password" name="userPwd" class="text"/></td> 
  </tr>
 
  <tr>
