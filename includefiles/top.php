@@ -4,13 +4,9 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title><?php echo $config_defaulttitle ?></title>
-<<<<<<< HEAD
     <script src="/scripts/jq.js"></script>
 	<script src="/scripts/common.js"></script>
 	<style>
-=======
-    <style>
->>>>>>> 0bb2b9f2413a699918c29b0ca8c42f71890fb8f0
                 
         *{margin:0 auto;text-align:center;font-size:14px;font-family:"Times New Roman"; }
         body{background: url(images/bg.jpg);}

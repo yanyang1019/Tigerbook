@@ -6,11 +6,8 @@
         function loadNews($classids,$keyword,$page,$pagesize)
         {   
             $news1=array(
-<<<<<<< HEAD
-                "news_title"=>"Lava Spews From Hawaii's Kilauea Hours",
-=======
                 "news_title"=>"Lava Spews From Hawaii's Kilauea Hours After 5.0 Quake",
->>>>>>> 0bb2b9f2413a699918c29b0ca8c42f71890fb8f0
+
                 "news_intr"=>"Kilauea,Hawaii's most active volcano, began spewing lava into a residential area on Thursday, forcing evacuations after hundreds of small earthquakes in recent days telegraphed an impending eruption.
 
 The new flow on Hawaii's Big Island came just hours after a 5.0-magnitude temblor, the strongest in a series of magnitude 2.5 or greater quakes to strike the area.

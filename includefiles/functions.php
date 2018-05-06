@@ -28,11 +28,7 @@
             "friends"=>"friends.tpl",
             "profile"=>"profile.tpl",
             "login"=>"login.tpl",
-<<<<<<< HEAD
-			"logout"=>"logout.tpl",
-=======
-	    "logout"=>"logout.tpl",
->>>>>>> 0bb2b9f2413a699918c29b0ca8c42f71890fb8f0
+            "logout"=>"logout.tpl"
             
        ); 
        

@@ -94,13 +94,7 @@ class webuser
         }
     }
     
-<<<<<<< HEAD
-     private function userLogin($username,$userpwd)
-    {
-        //database code goes here
-        if(trim($username)=="") return;
-        setcookie("mywebuser",$username,time()+200,"/");
-=======
+
      public function userLogin($username,$userpwd)
     {
         //database code goes here
@@ -118,16 +112,12 @@ class webuser
             return true;
         
         //setcookie("mywebuser",$username,time()+200,"/");
->>>>>>> 0bb2b9f2413a699918c29b0ca8c42f71890fb8f0
     }
     
     
     
-<<<<<<< HEAD
-    private function addUser($userName,$userEmail,$userPwd1,$userPwd2) //add user to database
-=======
+
     public function addUser($userName,$userEmail,$userPwd1,$userPwd2) //add user to database
->>>>>>> 0bb2b9f2413a699918c29b0ca8c42f71890fb8f0
     {
         
         if($userPwd1=="" || $userPwd1!=$userPwd2 ) //password doesn't match 
@@ -141,49 +131,30 @@ class webuser
             return false; 
         }
         
-<<<<<<< HEAD
-=======
         /*
->>>>>>> 0bb2b9f2413a699918c29b0ca8c42f71890fb8f0
         if(isFormat($userName,$userEmail))
         {
             $this->error_code="003";
             return false;
-<<<<<<< HEAD
         } 
-        
-        if(isRepeat($userName,$userEmail)) //------> shu ju ku 
-=======
-        } */
+        */
         
         require_once "..\library\database.php";
         $db = new Database();
         $db->connect();
         
         if($db->isUserRepeat($userName)) //------> shu ju ku 
->>>>>>> 0bb2b9f2413a699918c29b0ca8c42f71890fb8f0
         {
               $this->error_code="004";
             return false;
         }
-        
-<<<<<<< HEAD
-        $ret=DataBase::addData($userName,$userEmail,$userPwd1,$userPwd2);
-        if($ret && intval($ret)>0) //successfully added into database
-        {
-             $this->error_code="000";
-            return true;
-        }
-        $this->error_code="009";
-        return false;
-=======
+
         
         $sql = "insert into Login Values ('$userName','$userEmail',md5('$userPwd1'))";
         $db->execForOne($sql);
 
         $db->close();
         echo "register success!";
->>>>>>> 0bb2b9f2413a699918c29b0ca8c42f71890fb8f0
     }
 }
 
