@@ -50,9 +50,9 @@
                         echo webuser::getCurrentUser();?>
                 </span> 
                     <?php if(webuser::userIsLogged()):?>
-                        | <a href="/logout">Logout</a>
+                        | <a href="index.php?type=logout">Logout</a>
                     <?php else:?>
-                        | <a href="/login">Login</a>
+                        | <a href="index.php?type=login">Login</a>
                     <?php endif;?>
             </div>
  
