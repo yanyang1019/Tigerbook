@@ -1,0 +1,8 @@
+ <ifmodule mod_rewrite.c>
+    RewriteEngine On
+    
+    RewriteRule ^news$ /index.php?type=news [L]
+    RewriteRule ^reg /index.php?type=reg [L]
+    RewriteRule ^login /index.php?type=login [L]
+    RewriteRule ^logout /index.php?type=logout [L]
+  </ifmodule>

@@ -1,6 +1,23 @@
 <?php
-    
-    function func_loadTpl(){
+
+    function func_doAction($posts)
+    {
+        if(isset($_GET["type"]))
+        {
+            if($_GET["type"]=="login" && isset($posts["cmdLogin"]))
+            {
+                require_once("module/webuser.php");
+                $user=new webuser();
+                $user->login($posts["userName"],$posts["userPwd"]);
+                header("location:/");
+            }
+        }
+    }
+  
+
+
+    function func_loadTpl()
+    {
         
         $tpl_root="tpl/";
         
@@ -10,6 +27,8 @@
             "index"=>"index.tpl",
             "friends"=>"friends.tpl",
             "profile"=>"profile.tpl",
+            "login"=>"login.tpl",
+			"logout"=>"logout.tpl",
             
        ); 
        
@@ -22,10 +41,23 @@
                 include $tpl_root."index.tpl";
         }
         else{
-            //???,????
-            include $tpl_root."index.tpl";
-            
+            include $tpl_root."index.tpl";           
         }
         
     }
 ?>
+
+
+<?php
+     function the_news($params="")
+     {  
+        $getNews=new webnews();
+        $result=$getNews->loadNews("","",1,20);
+        return $result;
+     }
+?>
+
+
+
+
+
