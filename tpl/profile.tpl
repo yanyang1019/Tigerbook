@@ -10,7 +10,7 @@
     .regtable .text{width:58%;border: solid 1px #ddd;height:34px;line-height:34px;background:#f5f5f5;border-radius:5px;}
     #cmdMod{width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;}
     img{width: 200px;}
-    #profilePhoto{text-align: center;width: 80%}
+    #profilePhoto{text-align: left;width: 80%}
 </style>
 
 <table class="mytable regtable">
@@ -19,10 +19,10 @@
   <th class="righttd">User Information</th>
  </tr>
     <tr>
-        <td></td>
+        <td class="lefttd">Profile Photo</td>
         <td class="righttd" id="profilePhoto">
-            <button type="button">Upload</button>
             <img alt="profilePhoto" src="     ">
+            <input id="fileId" type="file" accept="image/jpeg,image/png" name="chooseFile" />
         </td>
         
     </tr>
