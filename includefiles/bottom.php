@@ -1,5 +1,5 @@
 <style>
-    .bottom{width:100%;margin:0 auto;background:#474747;height:80px;padding-top:20px;color:#fff；    position: fixed;bottom: 0;}
+    .bottom{width:100%;margin:0 auto;background:#474747;height:80px;padding-top:20px;color:#fff;bottom:0;position: fixed;}
     .bottom a{color:#fff;text-decoration: none;}
     .bottom a:hover{text-decoration:underline}
 </style> 

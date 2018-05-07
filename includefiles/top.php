@@ -66,10 +66,12 @@
 				<a href="index.php?type=profile">Profile</a>  |  
 				<a href="index.php?type=reg">User Register</a> |
 				
+<!--
 				<form action="index.php" method="post" name="搜索的关键字" id="搜索的关键字">
           			<input name="搜索的关键字" type="text" id="搜索的关键字"   />
           			<input name="Submit" type="submit" value="Search" />
 				</form>
+-->
 <!--                <input type="text" class="search" />-->
             </div>
         </div>
