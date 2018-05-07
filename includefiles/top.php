@@ -4,8 +4,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title><?php echo $config_defaulttitle ?></title>
-    <script src="scripts/jq.js"></script>
-	<script src="scripts/common.js"></script>
+    <script src="/scripts/jq.js"></script>
+	<script src="/scripts/common.js"></script>
 	<style>
                 
         *{margin:0 auto;text-align:center;font-size:14px;font-family:"Times New Roman"; }
@@ -39,6 +39,7 @@
         .newsregion dd{width:90%;line-height:20px;text-align: left;padding:10px;text-indent:2em;}
         .newsregion .pubtime{border:0;background:url(/images/newsbar.jpg);
         width:100%;padding:0;height:35px;padding-top:10px;border-top:solid 1px #ddd;}
+		div.menu{display: flex;}
     </style>
  </head>
  <body>
@@ -58,14 +59,18 @@
                     <?php endif;?>
             </div>
  
-            <div class="menu"> <a href="index.php?type=index"> Main </a>  |  <a href="index.php?type=news">News</a> |   <a href="index.php?type=friends">Friends</a>  |  <a href="index.php?type=profile">Profile</a>  |  <a href="index.php?type=reg">User Register</a>  
-			
-<!--			搜索框-->
-            <form action="search.php" method="post" name="搜索的关键字" id="搜索的关键字">
-          		<input name="搜索的关键字" type="text" id="搜索的关键字"   />
-          		<input name="Submit" type="submit" value="搜" />
-        	</form>
-                
+            <div class="menu"> 
+				<a href="index.php?type=index"> Main </a>  |  
+				<a href="index.php?type=news">News</a> |   
+				<a href="index.php?type=friends">Friends</a>  |  
+				<a href="index.php?type=profile">Profile</a>  |  
+				<a href="index.php?type=reg">User Register</a> |
+				
+				<form action="index.php" method="post" name="搜索的关键字" id="搜索的关键字">
+          			<input name="搜索的关键字" type="text" id="搜索的关键字"   />
+          			<input name="Submit" type="submit" value="Search" />
+				</form>
+<!--                <input type="text" class="search" />-->
             </div>
         </div>
   </div> 
