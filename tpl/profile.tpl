@@ -8,8 +8,9 @@
     .regtable .lefttd{text-align: right;width:25%;color:gray}
     .regtable .righttd{text-align: left;width:75%}
     .regtable .text{width:58%;border: solid 1px #ddd;height:34px;line-height:34px;background:#f5f5f5;border-radius:5px;}
-    #cmdReg{width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;}
-    img{width: 50%}
+    #cmdMod{width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;}
+    img{width: 200px;}
+    #profilePhoto{text-align: center;width: 80%}
 </style>
 
 <table class="mytable regtable">
@@ -18,8 +19,12 @@
   <th class="righttd">User Information</th>
  </tr>
     <tr>
-        <td><img alt="profilePhoto" src="     "></td>
-        <td><button type="button">Upload</button></td>
+        <td></td>
+        <td class="righttd" id="profilePhoto">
+            <button type="button">Upload</button>
+            <img alt="profilePhoto" src="     ">
+        </td>
+        
     </tr>
  <tr>
    <td  class="lefttd">Username:</td>
@@ -32,7 +37,7 @@
  </tr>
   
     <tr>
-        <td class="leftted">Old Password</td>
+        <td class="lefttd">Old Password</td>
         <td class="righttd"><input type="password" name="oldPwd" class="text"/></td>
     </tr>
  <tr>
