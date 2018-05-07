@@ -21,21 +21,25 @@
          });
          })
          blankBlur("userEmail");
-    $("#cmdReg").click(function(){
+		$("#cmdReg").click(function(){
         if(isBlank("userName","red"))
          {
+			  alert("Username cannot be empty");
             return false;
          }
          if(isBlank("userEmail","red"))
          {
+			alert("Email cannot be empty");
             return false;
          }
          if(isBlank("userPwd1","red"))
          {
+			 alert("Password cannot be empty");
             return false;
          }
          if(isBlank("userPwd2","red"))
          {
+			 alert("Confirm password cannot be empty");
             return false;
          }
          if(!isEqual("userPwd1","userPwd2"))
@@ -43,12 +47,6 @@
             alert("Password doesn't match");
             return false;
          }
-         if(!isCheck("cbRead"))
-         {
-            alert("????«??????»??????");
-            return false;
-         }
-         
        
          execServer(1,{username:$("#userName").val()},function(result){
             if(result!=null && result=="1") 
