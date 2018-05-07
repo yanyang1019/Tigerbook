@@ -64,7 +64,7 @@
  })
   
  </script>
-<form method="post" id="regForm" > <!--???get ??method=post???? -->
+<form method="post" id="regForm" action="includefiles\register.php">
 
 <style>
  .regtable{width:600px;background:#fff;border-radius:5px;padding-top:30px;padding-bottom:100px}

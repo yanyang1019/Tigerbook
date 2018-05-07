@@ -11,6 +11,18 @@
     $userPwd2 = trim($userPwd2);
     
     require_once "..\module\webuser.php";
-    webuser::addUser($userName,$userEmail,$userPwd1,$userPwd2);
-
+    if(webuser::addUser($userName,$userEmail,$userPwd1,$userPwd2)){
+        echo "<script>alert('register success')</script>";
+    }
+    else{
+        echo "<script>alert('register fail')</script>";
+    }
+    
+    $url = "http://localhost/Tigerbook/index.php";
+    
+    echo "<script language = 'javascript' type = 'text/javascript' > ";    
+    echo "window.location.href = '$url'";    
+    echo "</script > "; 
+    
+    
 ?>

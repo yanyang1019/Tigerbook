@@ -153,9 +153,10 @@ class webuser
         
         $sql = "insert into Login Values ('$userName','$userEmail',md5('$userPwd1'))";
         $db->execForOne($sql);
-
+        $sql2 = "insert into userInfo values ('$userName','','$userEmail')";
+        $db->execForOne($sql);
         $db->close();
-        echo "register success!";
+        return true;
     }
 }
 
