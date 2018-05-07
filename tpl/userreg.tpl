@@ -64,7 +64,7 @@
  })
   
  </script>
-<form method="post" id="regForm" action="includefiles\register.php">
+<form method="post" action="includefiles\register.php">
 
 <style>
  .regtable{width:600px;background:#fff;border-radius:5px;padding-top:30px;padding-bottom:100px}
@@ -104,7 +104,7 @@
  <tr>
   <td></td>
   <td class="righttd" >
-    <input type="button" value="Register" name="cmdReg"  id="cmdReg" class="abc readyShow" />
+    <input type="submit" value="Register" name="cmdReg"  id="cmdReg" class="abc readyShow" />
   </td>
  
  </tr>
