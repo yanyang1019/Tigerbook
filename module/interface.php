@@ -13,7 +13,7 @@ interface friend
 {
     function loadFriend($classids,$keyword,$page,$pagesize);
     function searchFriend($classids,$keyword,$page,$pagesize);
-    function friendRequest($classids,$keyword,$page,$pagesize);
+    function loadRequest($classids,$keyword,$page,$pagesize);
 }
 
 ?>

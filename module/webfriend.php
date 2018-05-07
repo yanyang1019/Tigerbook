@@ -42,14 +42,60 @@
             require_once "library\database.php";
             $db = new Database();
             $db->connect();
-            
-            
-            
+            $sql = "select * from userInfo where userName = '%$keyword%'";
+            $res = $db->execForOne($sql);
+            $friendlist;
+            while($row = mysqli_fetch_row($res)){
+                $userName = $row[0];
+                $nickName = $row[1];
+                $sex = $row[2];
+                $userEmail = $row[3];
+                $friend = array(
+                    "userName"=>$userName,
+                    "nickName"=>$nickName,
+                    "sex"=>$sex,
+                    "userEmail"=>$userEmail
+                );
+                $friendlist[] = $friend;
+            }
             $db->close();
+            return $friendlist;
         }
         
-        function friendRequest($classids, $keyword, $page, $pagesize) {
-            ;
+        function loadRequest($classids, $keyword, $page, $pagesize) {
+            
+            /*
+            $userName = webuser::getCurrentUser();
+            require_once "library\database.php";
+            $db = new Database();
+            $db->connect();
+            $sql = "select * from friendRequest where sendUser = '$userName' or recUser = '$userName'";
+            $res = $db->execForOne($sql);
+            $requestlist;
+            while($row = mysqli_fetch_row($res)){
+                $sendUser = $row[0];
+                $recUser = $row[1];
+                $sendTime = $row[2];
+                $status = (int)$row[3];
+                if($status == 0)
+                    $status = 'wait';
+                else if($status == 1)
+                    $status = 'accept';
+                else if($status == 2)
+                    $status = 'decline';
+                else
+                    $status = 'unkonwn';
+                $request= array(
+                    "sendUser"=>$sendUser,
+                    "recUser"=>$recUser,
+                    "sendTime"=>$sendTime,
+                    "status"=>$status
+                );
+                $requestlist[] = $request;
+            }
+            
+            $db->close();
+            return $requestlist;*/
         }
     }
 

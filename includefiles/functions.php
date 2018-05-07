@@ -76,6 +76,14 @@
          $result = $getFriend->loadFriend("","",1,20);
          return $result;
      }
+     
+     /*
+     function load_request($params="")
+     {
+         $getFriend = new webfriend();
+         $result = $getFriend->loadRequest("","",1,20);
+         return $result;
+     }*/
 ?>
 
 
