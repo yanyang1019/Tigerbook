@@ -23,7 +23,18 @@ body {font-family: "Lato", sans-serif;}
 .regtable .lefttd{text-align: right;width:25%;color:gray}
 .regtable .righttd{text-align: left;width:75%}
 .regtable .text{width:58%;border: solid 1px #ddd;height:34px;line-height:34px;background:#f5f5f5;border-radius:5px;}
-#cmdMod{width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;}
+#cmdMod{
+	width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;
+}
+#cmdMod1{
+	width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;
+}
+#cmdMod2{
+	width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;
+}
+#cmdMod3{
+	width:200px;height:40px;text-align:center;color:#fff;border:0;background:#e5b104;border-radius:5px;
+}
 img{width: 200px;}
 #profilePhoto{text-align: left;width: 80%}
     
