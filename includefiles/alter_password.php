@@ -21,10 +21,18 @@
     if($passWord == md5($oldPwd)){
         $sql2 = "update Login set passWord = md5('$userPwd1') where userName = '$userName'";
         $db->execForOne($sql2);
-        echo "success";
+        echo "<script>alert('success! please login in.')</script>";
+        $url = "http://localhost/Tigerbook/index.php?type=logout";
+        
     }
-    else
-        echo "fail";
+    else{
+        $url = "http://localhost/Tigerbook/index.php?type=profile";
+        echo "<script>alert('fail')</script>";
+    }
     
     $db->close();
+    
+    echo "<script language = 'javascript' type = 'text/javascript' > ";    
+    echo "window.location.href = '$url'";    
+    echo "</script > ";
 ?>

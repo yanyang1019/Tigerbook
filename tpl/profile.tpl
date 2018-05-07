@@ -31,30 +31,8 @@ img{width: 200px;}
 </head>
 <body>
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Photo')" id="defaultOpen">Photo</button>
-  <button class="tablinks" onclick="openTab(event, 'Info')">Information</button>
+  <button class="tablinks" onclick="openTab(event, 'Info')" id="defaultOpen">Information</button>
   <button class="tablinks" onclick="openTab(event, 'Password')">Password</button>
-</div>
-
-<div id="Photo" class="tabcontent">
-    <h3>Profile Photo</h3>
-    <form method="post">
-        <table class="mytable regtable">
-            <tr>
-                <td class="lefttd">Profile Photo</td>
-                <td class="righttd" id="profilePhoto">
-                    <img alt="profilePhoto" src="     ">
-                    <input id="fileId" type="file" accept="image/jpeg,image/png" name="chooseFile" />
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td class="righttd" >
-                    <input type="submit" value="save" name="cmdMod"  id="cmdMod1" />
-                </td>
-            </tr>
-        </table>
-    </form>
 </div>
 
 <div id="Info" class="tabcontent">

@@ -81,15 +81,6 @@
 	</div>
 	<div id="rightStage">
 		<div>
-			<!--搜索框-->
-                        <!--
-			<div id="searchBox" class="row">
-				<form action="index.php" method="post" name="搜索的关键字" id="搜索的关键字">
-				<input name="搜索的关键字" type="text" id="搜索的关键字"   />
-          			<input name="Submit" type="submit" value="Search" />
-				</form>
-			</div>
-			<!--POST框在这里 PostContent 其实是一个大的form 包含了不一样的文件-->
 			<div class="containerForm">
 			  <form method="post" action="includefiles\post.php">
 				<div class="row">
