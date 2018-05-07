@@ -79,7 +79,9 @@ class webuser
         
     }
     
-    
+    static public function logout(){
+        setcookie("mywebuser","",time()+200,"/");
+    }
     
     
     static public function getCurrentUser() //????????
@@ -108,12 +110,9 @@ class webuser
 
         if($total == 0)
             return false;
-        else{
-            __set('userName',$username);
-        }
-        return true;
         
         setcookie("mywebuser",$username,time()+200,"/");
+        return true;
     }
     
     
