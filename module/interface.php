@@ -9,9 +9,11 @@ interface news
     function reviewNews($newsid,$reviewData);
 }
 
-interface users
+interface friend
 {
-    
+    function loadFriend($classids,$keyword,$page,$pagesize);
+    function searchFriend($classids,$keyword,$page,$pagesize);
+    function friendRequest($classids,$keyword,$page,$pagesize);
 }
 
 ?>

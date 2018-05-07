@@ -1,5 +1,5 @@
 <?php
-    require "interface.php";
+    require_once "interface.php";
     class webnews implements news
     {
     

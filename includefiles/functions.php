@@ -62,6 +62,20 @@
         $result=$getNews->friendNews("","",1,20);
         return $result;
      }
+     
+     function friend_search($params="")
+     {
+         $getFriend = new webfriend();
+         $result = $getFriend->searchFriend("", $params, 1, 20);
+         return $result;
+     }
+     
+     function load_friend($params="")
+     {
+         $getFriend = new webfriend();
+         $result = $getFriend->loadFriend("","",1,20);
+         return $result;
+     }
 ?>
 
 

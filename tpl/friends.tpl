@@ -1,24 +1,25 @@
-<!DOCTYPE html>
+<?php  
+  $friendlist=load_friend();
+?>
 
-<html>
-	<head>
-		<style>
-			#searchBox{float:right;}
-		</style>
-	</head>
-	<body>
-		<div id="searchBox">
-		<form action=" " method=" " name=" " id=" ">
-			<input name="  " type="text" id=" "   />
-          	<input name="Submit" type="submit" value="Search" />
-		</form>
-		</div>
-		
-		<dl class="user">
-<!--			<?php foreach($result as $news):?>-->
-			<dt> SearchedUserName    
-				<button>Add</button>
-			</dt>
-		</dl>
-	</body>
-</html>
+<head>
+    <style>
+	#searchBox input{float:right;}
+    </style>
+</head>
+<body>
+    <div id="searchBox">
+	<form action=" " method=" " name=" " id=" ">
+            <input name="  " type="text" id=" "   />
+            <input name="Submit" type="submit" value="Search" />
+	</form>
+    </div>
+    <div class="user">
+    	<?php foreach($friendlist as $friend):?>
+	<dt><?php echo $friend["userName"]  ?></dt>
+        <dd>
+            <?php echo $friend["userEmail"]  ?>
+        </dd>
+        <?php endforeach;?>
+    </div>
+</body>
