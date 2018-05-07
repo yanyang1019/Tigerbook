@@ -3,7 +3,7 @@
 ?>
 <head>
 	<style>
-		#searchBox{float:right;}
+		#searchBox input{float:right;}
 		#outer{display: flex;}
 		#leftStage{width: 70%;float:left;padding:20px;}
 		#rightStage{width: 20%;float:right; padding-right:10px;}
@@ -81,11 +81,19 @@
 	</div>
 	<div id="rightStage">
 		<div>
+			<div class="row">
+				<div id="searchBox">
+					<form action=" " method=" " name=" " id=" ">
+						<input name="  " type="text" id="searchContentsBox"   />
+						<input name="Submit" type="submit" value="Search" />
+					</form>
+				</div>
+			</div>
 			<div class="containerForm">
 			  <form method="post" action="includefiles\post.php">
 				<div class="row">
-                                    <label for="postTitle"> Title </label>
-                                    <input type="text" name="postTitle" autocomplete="off"  id="postTitle" class="text"/>
+                    <label for="postTitle"> Title </label>
+                    <input type="text" name="postTitle" autocomplete="off"  id="postTitle" class="text"/>
 				</div>
 				<div class="row">
 					<label for="postContents">Post Something New</label>
