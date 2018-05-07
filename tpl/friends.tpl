@@ -2,7 +2,7 @@
   $friendlist=load_friend();
 ?>
 
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
 <html>
 	<head>
 		<style>
@@ -45,23 +45,26 @@
 					</form>
 				</div>
 				<div id="displayStage">
+					<?php foreach($friendlist as $friend):?>
 					<dl class="newFriends">
 						<dt>
 							<button class="addButton">Add</button> 
-							SearchedUserName    
+							<?php echo $friend["userName"]  ?>   
 						</dt>
 						<dd>
 							Show Nick Name:
 							<br>Show Sex:
-							<br>Show userEmail:
+							<br><?php echo $friend["userEmail"]  ?>
 						</dd>
 					</dl>
+					<?php endforeach;?>
 				</div>
 			</div>
 		</div>
 			
 	</body>
 </html>
+<!--
 =======
 <head>
     <style>
@@ -85,3 +88,4 @@
     </div>
 </body>
 >>>>>>> efe5d78a05144e50d453841afceb30d0fde2bf96
+-->
