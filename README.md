@@ -1,5 +1,4 @@
 # Tigerbook
-# Tigerbook
 
 #Tema Member: 
 Pinwen Xu, Wentao Song, Yan Yang, Yuhan Chen, Yuzhou He, Zhiqian Zhou.
