@@ -38,6 +38,7 @@ img{width: 200px;}
 
 <div id="Photo" class="tabcontent">
     <h3>Profile Photo</h3>
+    <form method="post">
         <table class="mytable regtable">
             <tr>
                 <td class="lefttd">Profile Photo</td>
@@ -49,34 +50,42 @@ img{width: 200px;}
             <tr>
                 <td></td>
                 <td class="righttd" >
-                    <input type="submit" value="save" name="cmdMod"  id="cmdMod" />
+                    <input type="submit" value="save" name="cmdMod"  id="cmdMod1" />
                 </td>
             </tr>
         </table>
+    </form>
 </div>
 
 <div id="Info" class="tabcontent">
     <h3>Information</h3>
+    <form method="post" action="..\includefiles\profileInfo.php">
         <table class="mytable regtable">
             <tr>
-                <td  class="lefttd">Username:</td>
-                <td class="righttd"><input type="text" name="userName"  class="text"/></td> 
+                <td  class="lefttd">Nickname:</td>
+                <td class="righttd"><input type="text" name="nickName"  class="text"/></td> 
             </tr>
             <tr>
                 <td  class="lefttd">Mail:</td>
                 <td class="righttd"><input type="text" name="userEmail"  class="text"/></td> 
             </tr>
             <tr>
+                <td  class="lefttd">Sex:</td>
+                <td class="righttd"><input type="text" name="userSex"  class="text"/></td> 
+            </tr>
+            <tr>
                 <td></td>
                 <td class="righttd" >
-                    <input type="submit" value="save" name="cmdMod"  id="cmdMod" />
+                    <input type="submit" value="save" name="cmdMod"  id="cmdMod2"/>
                 </td>
             </tr>
         </table>
+    </form>
 </div>
 
-<div id="Password" class="tabcontent">
+<div id="Password" class="tabcontent" >
     <h3>Password</h3>
+    <form method="post" action="..\includefiles\alter_password.php">
     <table class="mytable regtable">
         <tr>
             <td class="lefttd">Old Password</td>
@@ -93,11 +102,11 @@ img{width: 200px;}
         <tr>
             <td></td>
             <td class="righttd" >
-                <input type="submit" value="save" name="cmdMod"  id="cmdMod" />
+                <input type="submit" value="save" name="cmdMod"  id="cmdMod3" />
             </td>
          </tr>
     </table>
-
+    </form>
 </div>
 
 <script>
@@ -117,6 +126,7 @@ function openTab(evt, tabName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
 </script>
      
 </body>
