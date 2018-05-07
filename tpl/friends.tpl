@@ -3,22 +3,59 @@
 <html>
 	<head>
 		<style>
-			#searchBox{float:right;}
+			#container{width: 100%; display: flex;}
+			#container h1{font-size: 40px;}
+			#displayLeft{width: 45%;float: left; padding-right: 5px;}
+			#displayRight{width: 45%;float: left; padding-left:5px;}
+			
+			#displayStage{margin: 0 auto;}
+			.user{background: #fff;float:left;margin: 18px auto; margin-left: 18px; border-radius: 20px;width: 100%;height: auto; border: solid 1px #ddd;text-align: center;font-size: 15px;}
+			.newFriends{background: #fff;margin: 18px auto; margin-left: 18px; border-radius: 20px;width: 80%;height: auto; border: solid 1px #ddd;text-align: center;font-size: 15px;}
+			dt{font-size: 23px;height: auto;}
+			dd{font-size: 15px;}
+			.addButton{background-color:#474747;color: white;width: 80px; border-radius:20px;height:auto; float:left;font-size:17px;}
+			
 		</style>
 	</head>
 	<body>
-		<div id="searchBox">
-		<form action=" " method=" " name=" " id=" ">
-			<input name="  " type="text" id=" "   />
-          	<input name="Submit" type="submit" value="Search" />
-		</form>
+		<div id="container">
+			<div id="displayLeft">
+				<h1>Here is your friends:</h1>
+				<dl class="user">
+					<dt>
+						Friends be here    
+					</dt>
+					<dd>
+						Show Nick Name:
+						<br>Show Sex:
+						<br>Show userEmail:
+					</dd>
+				</dl>
+			</div>
+
+			<div id="displayRight">
+				<h1>Find new friends:</h1>
+				<div id="searchBox">
+					<form action=" " method=" " name=" " id=" ">
+						<input name="  " type="text" id=" "   />
+						<input name="Submit" type="submit" value="Search" />
+					</form>
+				</div>
+				<div id="displayStage">
+					<dl class="newFriends">
+						<dt>
+							<button class="addButton">Add</button> 
+							SearchedUserName    
+						</dt>
+						<dd>
+							Show Nick Name:
+							<br>Show Sex:
+							<br>Show userEmail:
+						</dd>
+					</dl>
+				</div>
+			</div>
 		</div>
-		
-		<dl class="user">
-<!--			<?php foreach($result as $news):?>-->
-			<dt> SearchedUserName    
-				<button>Add</button>
-			</dt>
-		</dl>
+			
 	</body>
 </html>
