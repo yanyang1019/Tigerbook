@@ -58,8 +58,14 @@
                     <?php endif;?>
             </div>
  
-            <div class="menu"> <a href="index.php?type=index"> Main </a>  |  <a href="index.php?type=news">News</a> |   <a href="index.php?type=friends">Friends</a>  |  <a href="index.php?type=profile">Profile</a>  |  <a href="index.php?type=reg">User Register</a> 
-                <input type="text" class="search" />
+            <div class="menu"> <a href="index.php?type=index"> Main </a>  |  <a href="index.php?type=news">News</a> |   <a href="index.php?type=friends">Friends</a>  |  <a href="index.php?type=profile">Profile</a>  |  <a href="index.php?type=reg">User Register</a>  
+			
+<!--			搜索框-->
+            <form action="search.php" method="post" name="搜索的关键字" id="搜索的关键字">
+          		<input name="搜索的关键字" type="text" id="搜索的关键字"   />
+          		<input name="Submit" type="submit" value="搜" />
+        	</form>
+                
             </div>
         </div>
   </div> 
