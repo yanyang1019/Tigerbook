@@ -59,7 +59,7 @@ img{width: 200px;}
 
 <div id="Info" class="tabcontent">
     <h3>Information</h3>
-    <form method="post" action="..\includefiles\profileInfo.php">
+    <form method="post" action="includefiles\profileInfo.php">
         <table class="mytable regtable">
             <tr>
                 <td  class="lefttd">Nickname:</td>
@@ -85,7 +85,7 @@ img{width: 200px;}
 
 <div id="Password" class="tabcontent" >
     <h3>Password</h3>
-    <form method="post" action="..\includefiles\alter_password.php">
+    <form method="post" action="includefiles\alter_password.php">
     <table class="mytable regtable">
         <tr>
             <td class="lefttd">Old Password</td>

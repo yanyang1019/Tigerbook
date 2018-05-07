@@ -79,7 +79,9 @@ class webuser
         
     }
     
-    
+    static public function logout(){
+        setcookie("mywebuser","",time()+200,"/");
+    }
     
     
     static public function getCurrentUser() //????????

@@ -8,8 +8,9 @@
     $userEmail = trim($userEmail);
     $userSex = trim($userSex);
     
+    require_once "..\module\webuser.php";
     $userName = webuser::getCurrentUser();
-    require_once "..\libarary\database.php";
+    require_once "..\library\database.php";
     $db = new Database();
     $db->connect();
     
