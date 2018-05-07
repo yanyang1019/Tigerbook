@@ -5,12 +5,12 @@
     
         function selfNews($classids,$keyword,$page,$pagesize)
         {   
-            
+            $userName = webuser::getCurrentUser();
             require_once "library\database.php";
             $db = new Database();
             $db->connect();
             
-            $sql = "select * from userPost";
+            $sql = "select * from userPost where userName = '$userName'";
             $res = $db->execForOne($sql);
             $newslist;
             
