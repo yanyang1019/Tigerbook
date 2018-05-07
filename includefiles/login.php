@@ -8,7 +8,7 @@
     
     require_once "..\module\webuser.php";
     if(webuser::userLogin($userName,$userPwd))
-            echo "sucess";
+        echo "success";
     else
         echo "fail";
 

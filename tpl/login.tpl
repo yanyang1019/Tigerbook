@@ -7,13 +7,13 @@
     $("#cmdLogin").click(function(){
     if(isBlank("txtUserName","red"))
     {
-        alert("???????");
+        alert("username is empty");
         return false;//??? submit??
     }
    
    if(isBlank("txtUserPwd","blue"))
     {
-        alert("??????");
+        alert("password is empty");
         return false;//??? submit??
     }   
   })
@@ -21,7 +21,7 @@
  
  </script>
 
-<form method="post" action="includefiles/login.php">
+<form method="post" action="..\includefiles\login.php">
 <style>
     .regtable{width:600px;background:#fff;border-radius:5px;padding-top:30px;padding-bottom:100px}
     .regtable th{font-size:26px;color:#9c9c9c}

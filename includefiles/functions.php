@@ -52,7 +52,14 @@
      function the_news($params="")
      {  
         $getNews=new webnews();
-        $result=$getNews->loadNews("","",1,20);
+        $result=$getNews->selfNews("","",1,20);
+        return $result;
+     }
+     
+     function friend_news($params="")
+     {
+         $getNews=new webnews();
+        $result=$getNews->friendNews("","",1,20);
         return $result;
      }
 ?>

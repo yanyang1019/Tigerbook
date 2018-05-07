@@ -108,10 +108,12 @@ class webuser
 
         if($total == 0)
             return false;
-        else
-            return true;
+        else{
+            __set('userName',$username);
+        }
+        return true;
         
-        //setcookie("mywebuser",$username,time()+200,"/");
+        setcookie("mywebuser",$username,time()+200,"/");
     }
     
     

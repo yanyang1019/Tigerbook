@@ -2,7 +2,8 @@
 
 interface news 
 {
-    function loadNews($classids,$keyword,$page,$pagesize);
+    function selfNews($classids,$keyword,$page,$pagesize);
+    function friendNews($classids,$keyword,$page,$pagesize);
     function loadNewsDetail($newsid);
     function clickNews($newsid);
     function reviewNews($newsid,$reviewData);
