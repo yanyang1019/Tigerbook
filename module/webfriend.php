@@ -4,16 +4,16 @@
     class webfriend implements friend{
         
         function loadFriend($classids, $keyword, $page, $pagesize) {
-            $userName = webuser::getCurrentUser();
+            $curUser = webuser::getCurrentUser();
             require_once "library\database.php";
             $db = new Database();
             $db->connect();
-            $sql = "select * from friend where userName1 = '$userName' or userName2 = '$userName'";
+            $sql = "select * from friend where userName1 = '$curUser' or userName2 = '$curUser'";
             $res = $db->execForOne($sql);
             $friendlist;
             while($row = mysqli_fetch_row($res)){
                 $user;
-                if($row[0] != $userName)
+                if($row[0] != $curUser)
                     $user = $row[0];
                 else
                     $user = $row[1];
@@ -44,7 +44,7 @@
             $db->connect();
             $sql = "select * from userInfo where userName = '%$keyword%'";
             $res = $db->execForOne($sql);
-            $friendlist;
+            $friendlist = NULL;
             while($row = mysqli_fetch_row($res)){
                 $userName = $row[0];
                 $nickName = $row[1];

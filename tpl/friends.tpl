@@ -2,7 +2,25 @@
   $friendlist=load_friend();
 ?>
 
-<!--<<<<<<< HEAD-->
+<script>
+    function showUploadPage(){
+        var display = document.getElementById("display");
+        xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                    display.innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","includefiles\loadForm.php", true);
+            xmlhttp.send();
+        }
+        
+    function addFriend(id){
+        
+    }
+</script>
+
+
 <html>
 	<head>
 		<style>
@@ -24,68 +42,43 @@
 		<div id="container">
 			<div id="displayLeft">
 				<h1>Here is your friends:</h1>
+                                <?php foreach($friendlist as $friend):?>
 				<dl class="user">
 					<dt>
-						Friends be here    
+						<?php echo $friend["userName"]  ?>    
 					</dt>
 					<dd>
-						Show Nick Name:
-						<br>Show Sex:
-						<br>Show userEmail:
+						Nick Name: <?php echo $friend["nickName"]  ?>
+						<br> Sex: <?php echo $friend["sex"]  ?>
+						<br> userEmail: <?php echo $friend["userEmail"]  ?>
 					</dd>
 				</dl>
+                                <?php endforeach;?>
 			</div>
 
 			<div id="displayRight">
 				<h1>Find new friends:</h1>
 				<div id="searchBox">
-					<form action=" " method=" " name=" " id=" ">
-						<input name="  " type="text" id=" "   />
-						<input name="Submit" type="submit" value="Search" />
+					<form method="post">
+						<input name="friendSearch" type="text" id="friendSearch"   />
+						<button name="search" type="button" value="Search" id="btn" onclick="showUploadPage()"/>
 					</form>
 				</div>
-				<div id="displayStage">
-					<?php foreach($friendlist as $friend):?>
+				<div id="display">
 					<dl class="newFriends">
+                                            <!--
 						<dt>
-							<button class="addButton">Add</button> 
-							<?php echo $friend["userName"]  ?>   
+                                                    <button class="addButton" id="addBtn" onclick="addFriend(this.id)" >Add</button>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 						</dt>
 						<dd>
-							Show Nick Name:
-							<br>Show Sex:
+							Nick Name:
+							<br> Sex:
 							<br><?php echo $friend["userEmail"]  ?>
-						</dd>
+						</dd>-->
 					</dl>
-					<?php endforeach;?>
 				</div>
 			</div>
 		</div>
 			
 	</body>
 </html>
-<!--
-=======
-<head>
-    <style>
-	#searchBox input{float:right;}
-    </style>
-</head>
-<body>
-    <div id="searchBox">
-	<form action=" " method=" " name=" " id=" ">
-            <input name="  " type="text" id=" "   />
-            <input name="Submit" type="submit" value="Search" />
-	</form>
-    </div>
-    <div class="user">
-    	<?php foreach($friendlist as $friend):?>
-	<dt><?php echo $friend["userName"]  ?></dt>
-        <dd>
-            <?php echo $friend["userEmail"]  ?>
-        </dd>
-        <?php endforeach;?>
-    </div>
-</body>
->>>>>>> efe5d78a05144e50d453841afceb30d0fde2bf96
--->
