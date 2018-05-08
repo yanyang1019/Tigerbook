@@ -20,7 +20,6 @@ Our website named *Tigerbook*. It is a part of social network like *Facebook*. Y
 * Register as an unique user.
 * Change the nickname and password.
 * Change the head sculpture.
-* Comment others' posts.
 * Serach and add friends.
 # Resource:
 * Axosoft:https://hyz000917.axosoft.com/
