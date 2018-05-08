@@ -4,8 +4,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title><?php echo $config_defaulttitle ?></title>
-    <script src="/scripts/jq.js"></script>
-	<script src="/scripts/common.js"></script>
+    <script src="scripts/jq.js"></script>
+	<script src="scripts/common.js"></script>
 	<style>
                 
         *{margin:0 auto;text-align:center;font-size:14px;font-family:"Times New Roman"; }
