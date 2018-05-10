@@ -24,4 +24,4 @@ Our website named *Tigerbook*. It is a part of social network like *Facebook*. Y
 # Resource:
 * Axosoft:https://hyz000917.axosoft.com/
 * Website:http://ec2-54-167-224-133.compute-1.amazonaws.com/CS4320Final/Tigerbook/index.php?type=index
-* Video:
+* Video:https://www.youtube.com/watch?v=y2DHr9sYZM4&feature=youtu.be
